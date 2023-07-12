@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/login">Login page</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>This is the home page of the group chat</h1>
+        <form action="/home" method="post" onsubmit="document.getElementById('username').value = localStorage.getItem('username')">
+            <label for="message">Enter Your Message</label><br>
+            <input title="msg" type="text" name="msgs">
+            <input type="hidden" name="username" id="username">
+            <button type="submit">Send</button>
+        </form>
+
+        <h2>Messages:</h2>
+        <ul id="messageList"></ul>
+
+        
+    </main>
+</body>
+</html>

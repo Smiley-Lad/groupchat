@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script>
+        function storeUsername() {
+            var username = document.getElementById('username').value;
+            localStorage.setItem('username', username);
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <form onsubmit="storeUsername()" action="/home" method="post">
+            <label for="user_name">User Name</label>
+            <input id="username" type="text" name="username">
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+</body>
+</html>
